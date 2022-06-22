@@ -1,0 +1,54 @@
+﻿@model List<ExamApp.Entities.Concrete.Student>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Student Number
+            </th>
+            <th>
+                 Name
+            </th>
+            <th>
+                 Surname
+            </th>
+             <th>
+                 Class
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                 <td>
+                    @Html.DisplayFor(modelItem => item.Class)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.StudentNumber">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.StudentNumber">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

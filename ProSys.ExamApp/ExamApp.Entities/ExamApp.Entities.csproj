@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExamApp.DAL\ExamApp.DAL.csproj" />
-    <ProjectReference Include="..\ExamApp.Entities\ExamApp.Entities.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.6" />
   </ItemGroup>
 
 </Project>
